@@ -4,7 +4,7 @@ on:
   push:
     tags:
       - '*'
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   build-and-release:
@@ -23,8 +23,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ github.event_name == 'push' && github.ref_name || '0.0.0' }}
+          release_name: ${{ github.event_name == 'push' && github.ref_name || 'utils.sh-0.0.0' }}
+          
           draft: false
           prerelease: false
 
