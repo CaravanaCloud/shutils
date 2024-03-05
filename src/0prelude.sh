@@ -1,14 +1,5 @@
 #!/bin/bash
-# Utilities for bash scripts
-# Here's what we've got so far:
-# - Logging (data to stdout, logs to stderr)
-# -- log(LEVEL) and info() debug() warn() error()
-# - checkEnv VAR1 VAR2 VAR3
-# - awaitXxx [resource] [timeout] [retries]
-# -- awaitTCP 3306 12.0.0.1 15 3
-# -- awaitFile /dev/zero 15 3
-
-
+# Utility functions for bash scripts
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Define colors
