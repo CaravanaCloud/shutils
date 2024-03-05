@@ -1,2 +1,3 @@
 # utils.sh
-Helpful bash functions (check variables, urls, ports, etc)
+The same old simple utils.sh, as in every project, but tested and reliable.
+

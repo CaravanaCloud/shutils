@@ -1,4 +1,6 @@
 #!/bin/bash
+# @brief Adds two numbers. For debugging purposes.
+
 . ../src/0prelude.sh
 . ../src/add.sh
 

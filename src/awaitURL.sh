@@ -1,5 +1,3 @@
-#!/bin/bash
-
 awaitURL() {
     local url="$1"
     local expected_status="${2:-200}"
