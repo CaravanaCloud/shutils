@@ -1,5 +1,3 @@
-#!/bin/bash
-
 awaitTCP() {
     local port="${1:-80}"
     local host="${2:-127.0.0.1}"

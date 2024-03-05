@@ -1,6 +1,4 @@
-#!/bin/bash
-
-waitFile() {
+awaitFile() {
     local filepath="$1"
     local delay="${2:-5}" # Delay between retries in seconds, default to 5 seconds
     local retries="${3:-12}" # Number of retries, defaulting to 12 (1 minute if delay is 5 seconds)

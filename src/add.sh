@@ -1,4 +1,3 @@
-
 add() {
     local result=$(($1 + $2))
     # Logs are sent to stderr
