@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version tag (e.g., 1.0.0)'
+        description: 'Version tag (e.g., 1.2.3)'
         required: false
         default: '0.0.0'
 
@@ -28,9 +28,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.event_name == 'push' && github.ref_name || '0.0.0' }}
-          release_name: ${{ github.event_name == 'push' && github.ref_name || 'utils.sh-0.0.0' }}
-          
+          tag_name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.version || github.ref_name }}
+          release_name: ${{ github.event_name == 'workflow_dispatch' && 'utils.sh-' + github.event.inputs.version || 'utils.sh-' + github.ref_name }}
           draft: false
           prerelease: false
 
