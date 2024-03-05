@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. ./0prelude.sh
-. ./awaitTCP.sh
+. ../src/0prelude.sh
+. ../src/awaitTCP.sh
 
 testCheckPortOpen() {
   awaitTCP 24000 127.0.0.1 2 1

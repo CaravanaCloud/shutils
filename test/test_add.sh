@@ -1,6 +1,6 @@
 #!/bin/bash
-. ./0prelude.sh
-. ./add.sh
+. ../src/0prelude.sh
+. ../src/add.sh
 
 testAdd() {
   result=$(add 2 3)

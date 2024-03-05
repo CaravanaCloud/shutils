@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. ./0prelude.sh
-. ./awaitFile.sh
+. ../src/0prelude.sh
+. ../src/awaitFile.sh
 
 # Test: File exists (/dev/zero always exists)
 testFileExists() {

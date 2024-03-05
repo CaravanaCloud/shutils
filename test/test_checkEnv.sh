@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. ./0prelude.sh
-. ./checkEnv.sh
+. ../src/0prelude.sh
+. ../src/checkEnv.sh
 
 testCheckEnvAllPresent() {
   export VAR1="value1"
